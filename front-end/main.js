@@ -8,7 +8,7 @@ async function apiRequest() {
         const data = await response.json()
 
         console.log(data)
-        document.querySelector('h3').innerText = data.salary
+        document.querySelector('h3').innerText = data.salary.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
     } catch(err) {
         console.log(err)
     }
