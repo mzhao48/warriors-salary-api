@@ -1,7 +1,8 @@
-document.querySelector('button').addEventListener('click', apiRequest)
+// document.querySelector('button').addEventListener('click', apiRequest)
+document.querySelector('select').addEventListener('change', apiRequest)
 
 async function apiRequest() {
-    const playerName = document.querySelector('input').value
+    const playerName = document.querySelector('select').value
 
     try {
         const response = await fetch(`https://warriors-salary-api.herokuapp.com/api/${playerName}`)
